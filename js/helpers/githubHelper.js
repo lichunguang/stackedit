@@ -88,7 +88,7 @@ define([
                 }, 500);
             }
             function getToken() {
-                $.getJSON(GATEKEEPER_URL + "authenticate/" + code, function(data) {
+                $.getJSON('https://github.com/login/oauth/access_token?client_id=944e39c86a2b53564ac1&client_secret=bb3ee6019839378d14fa8882bcba052eea73dfa2&code='+code, function(data) {
                     if(data.token !== undefined) {
                         token = data.token;
                         localStorage["githubToken"] = token;
