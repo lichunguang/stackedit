@@ -65,6 +65,7 @@ define([
             var code = undefined;
             function getCode() {
                 localStorage.removeItem("githubCode");
+                document.getElementById("myvalue").value='';
                 authWindow = utils.popupWindow('github-oauth-client.html?client_id=' + GITHUB_CLIENT_ID, 'stackedit-github-oauth', 960, 600);
                 authWindow.focus();
                 intervalId = setInterval(function() {
@@ -73,11 +74,13 @@ define([
                         authWindow = undefined;
                         intervalId = undefined;
                         code = localStorage["githubCode"];
-                        if(code === undefined) {
+                        code = document.getElementById("myvalue").value;
+                        if(code == undefined || code=='') {
                             task.error(new Error(errorMsg));
                             return;
                         }
                         localStorage.removeItem("githubCode");
+                        document.getElementById("myvalue").value='';
                         task.chain(getToken);
                     }
                 }, 500);
