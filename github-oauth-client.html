@@ -18,7 +18,8 @@
 	} else {
 		if (code) {
 			localStorage["githubCode"] = code;
-			alert(code+'--'+localStorage["githubCode"]);
+			window.opener.document.getElementById('myvalue').value = code;
+			alert(window.opener.document.getElementById('myvalue').value);
 		}
 		window.close();
 	}
