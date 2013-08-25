@@ -38,9 +38,9 @@ function runDelayedFunction() {
 }
 
 // Site dependent
-var BASE_URL = "http://localhost/stackedit/";
+var BASE_URL = "http://lichunguang.github.io/stackedit/";
 var GOOGLE_CLIENT_ID = '241271498917-lev37kef013q85avc91am1gccg5g8lrb.apps.googleusercontent.com';
-var GITHUB_CLIENT_ID = 'e47fef6055344579799d';
+var GITHUB_CLIENT_ID = '944e39c86a2b53564ac1';
 var GATEKEEPER_URL = "http://stackedit-gatekeeper-localhost.herokuapp.com/";
 var TUMBLR_PROXY_URL = "http://stackedit-tumblr-proxy-local.herokuapp.com/";
 
