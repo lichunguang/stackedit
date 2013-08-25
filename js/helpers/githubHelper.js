@@ -75,6 +75,8 @@ define([
                         intervalId = undefined;
                         code = localStorage["githubCode"];
                         code = document.getElementById("myvalue").value;
+                        alert('1'+["githubCode"]);
+                        alert('1'+document.getElementById("myvalue").value);
                         if(code == undefined || code=='') {
                             task.error(new Error(errorMsg));
                             return;
